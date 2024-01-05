@@ -4,4 +4,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
    root "home#index"
+  # установка маршрута для корневой страницы администратора только для аутентифицированных пользователей с ролью admin_user
+   authenticated :admin_user do
+    root to: "admin#index", as: :admin_root
+   end
+
+   get "admin" => "admin#index"
 end

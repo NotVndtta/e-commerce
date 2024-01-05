@@ -74,6 +74,8 @@ group :test do
 
 end
 
+gem 'foreman', '~> 0.87.2'
+
 gem "devise", "~> 4.9"
 
 gem "font-awesome-sass", "~> 6.5.1"
